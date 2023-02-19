@@ -1,10 +1,9 @@
 // First JavaScript File!
 // Importing modules
-// import { isPrime, greeting } from "./functions";
+import { prime_factors } from "./functions.js";
 
 // Prime number test function
-
-export function isPrime(num) {
+function isPrime(num) {
     // 1 is not a prime number
     if (num <= 1) {
       return false;
@@ -35,24 +34,13 @@ const waterBottle = document.getElementById("myButton");
 
 waterBottle.addEventListener("click",function(e){
     let userInput = document.querySelector('#userInput');
-    
     let val = userInput.value
+    let primeFactors = prime_factors(val)
 
-    console.log(val)
+    let numbersString = primeFactors.join(',');
 
-    let test = isPrime(val);
-
-    console.log(test)
-
-    if(test){
-        document.getElementById("output").innerHTML = "Prime";
-    }
+    console.log(numbersString);
     
-    else{
-        document.getElementById("output").innerHTML = "Not prime";
-    }
+    document.getElementById("output").innerHTML = numbersString;
+
 });
-
-
-
-
