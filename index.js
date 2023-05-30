@@ -1,6 +1,6 @@
 // First JavaScript File!
 // Importing modules
-import { prime_factors } from "./functions.js";
+import { get_rand_int, target, compare } from "./test_file.js";
 
 // Prime number test function
 function isPrime(num) {
@@ -28,19 +28,38 @@ function isPrime(num) {
 
 // End of prime number test function
 
-// Exectute code if the button in page 3 is pressed:
+// Execute code if the button in page 3 is pressed:
 
-const waterBottle = document.getElementById("myButton");
+let target_cards;
+let num_deals = 0;
+const waterBottle = document.getElementById("deal");
+waterBottle.addEventListener("click",function(){
+    num_deals += 1;
+    target_cards = target();
+    document.getElementById("numberDeals").innerHTML = num_deals;
+});
 
-waterBottle.addEventListener("click",function(e){
-    let userInput = document.querySelector('#userInput');
-    let val = userInput.value
-    let primeFactors = prime_factors(val)
+// Function that compares the input cards to the target cards.
 
-    let numbersString = primeFactors.join(',');
-
-    console.log(numbersString);
-    
-    document.getElementById("output").innerHTML = numbersString;
+const iceCream = document.getElementById("myCards");
+iceCream.addEventListener("click",function(){
+    let input1 = document.querySelector('#input1').value;
+    let input2 = document.querySelector('#input2').value;
+    let input3 = document.querySelector('#input3').value;
+    let input4 = document.querySelector('#input4').value;
+    let card_store = [input1,input2,input3,input4];
+    let test_result = compare(card_store,target_cards);
+    document.getElementById("numberCorrect").innerHTML = test_result;
 
 });
+
+
+
+
+
+
+
+
+
+
+
