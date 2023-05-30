@@ -43,7 +43,6 @@ export function compare(string, target) {
     
     let output;
     if (k === 2) {
-       output = `${k} correct`;
        output = `${k} correct, reverse direction`;
       
     }
