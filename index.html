@@ -1,26 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <h1>MasterCard</h1>
-    <link rel="stylesheet" href="styles.css" rel = "stylesheet" type  = "text/css">
-</head>
-<body>
-    <p><button id="deal">Deal Cards</button></p>
-    <p><em>Number of deals:</em><strong><output type="text" id="numberDeals"></output></strong></p>
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>MasterCard</title>
+     <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+     <h1>MasterCard</h1>
+ 
+     <div class="container">
+         <div class="card-info">
+             <p>
+                 <button id="deal">Deal Cards</button>
+             </p>
+             <p class="section-heading">
+                 <strong>Number of deals:</strong> <output type="text" id="numberDeals"></output>
+             </p>
+             <p class="section-heading">Enter your cards below:</p>
+             <div class="button-container">
+                <button class="card-button" id="button2" value=2>2</button>
+                <button class="card-button" id="button3" value=3>3</button>
+                <button class="card-button" id="button4" value=4>4</button>
+                <button class="card-button" id="button5" value=5>5</button>
+                <button class="card-button" id="button6" value=6>6</button>
+                <button class="card-button" id="button7" value=7>7</button>
+                <button class="card-button" id="button8" value=8>8</button>
+                <button class="card-button" id="button9" value=9>9</button>
+                <button class="card-button" id="button10" value=10>10</button>
+                
+                 <button class="card-button" id="buttonJ" value="J">J</button>
+                 <button class="card-button" id="buttonQ" value="Q">Q</button>
+                 <button class="card-button" id="buttonK" value="K">K</button>
+                 <button class="card-button" id="buttonA" value="A">A</button>
+             </div>
+             <div class="input-container">
+                 <input type="text" id="input1" placeholder="Card 1">
+                 <input type="text" id="input2" placeholder="Card 2">
+                 <input type="text" id="input3" placeholder="Card 3">
+                 <input type="text" id="input4" placeholder="Card 4">
+             </div>
+             <button id="myCards" class="test-button">Test</button>
+             <p class="section-heading">
+                 <em>Number of cards correct:</em> <strong><output type="text" id="numberCorrect"></output></strong>
+             </p>
+         </div>
+     </div>
+ 
+     <script type="module" defer src="index.js"></script>
+ </body>
+ </html>
+ 
 
-    <p><em>Enter your cards below:</em>
-        <div class="input-container">
-            <input type="text" id="input1" placeholder="Card 1">
-            <input type="text" id="input2" placeholder="Card 2">
-            <input type="text" id="input3" placeholder="Card 3">
-            <input type="text" id="input4" placeholder="Card 4">
-          </div>
-        
-        <button id="myCards">Test</button>
-    </p>
-    <p><em>Number of cards correct:</em><strong><output type = "text" id = "numberCorrect">
-    </output> </strong></p>
-
-</body>
-<script type="module" defer src="index.js"></script>
-</html>
